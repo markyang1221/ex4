@@ -97,6 +97,7 @@ class Game:
                 self.board[i, j] = P.grid[i - (x1 - x//2), j - (y1 - y//2)]
         return self
 
+
 class Pattern:
     """Have methods to return transformed pattern."""
 
