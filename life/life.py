@@ -86,15 +86,15 @@ class Game:
         pyplot.matshow(self.board, fignum=0, cmap='binary')
         pyplot.show()
 
-    def insert(self, P, a):
+    def insert(self, pa, a):
         """Insert pattern P at location a."""
-        x = P.grid.shape[0]
-        y = P.grid.shape[1]
+        x = pa.grid.shape[0]
+        y = pa.grid.shape[1]
         x1 = a[0]
         y1 = a[1]
         for i in range(x1 - x//2, x1 + x//2 + 1):
             for j in range(y1 - y//2, y1 + y//2 + 1):
-                self.board[i, j] = P.grid[i - (x1 - x//2), j - (y1 - y//2)]
+                self.board[i, j] = pa.grid[i - (x1 - x//2), j - (y1 - y//2)]
         return self
 
 
